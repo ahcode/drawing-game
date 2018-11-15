@@ -3,9 +3,12 @@ var app = express();
 var bodyParser  = require("body-parser");
 
 var router = require("./router.js");
+var sessionMiddelware = require("./auth/sessions").middeware;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.use(sessionMiddelware);
 
 app.use(router);
 

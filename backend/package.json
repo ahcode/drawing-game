@@ -4,8 +4,10 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "body-parser": "^1.18.3"
+    "express-session": "^1.15.6",
+    "uuid": "^3.3.2"
   },
   "author": "ahcode",
   "license": "MIT"
