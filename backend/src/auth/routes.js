@@ -6,7 +6,7 @@ module.exports.login = function(req, res){
         res.send();
     }else{
         if(Users.newUser(req.body.user, req.sessionID)){
-            res.send('well done!');
+            res.send();
         }else{
             res.status(400);
             res.send('Username is in use :(');
