@@ -11,9 +11,11 @@ app.use(bodyParser.json());
 
 app.use(sessionMiddelware);
 
+app.use(express.static('public'));
 app.use(router);
 
-app.use(express.static('public'));
+//Redirect to Angular index if path is not detected
+app.use((req, res) => res.sendFile('index.html', {'root': './public'}));
 
 if(process.env.SERVER_HTTPS == "TRUE"){
     //HTTPS Enabled
