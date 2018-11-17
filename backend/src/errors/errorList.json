@@ -1,0 +1,46 @@
+{
+    "-": {
+        "status": 500,
+        "msg": "Unknown Error"
+    },
+    "E00.00": {
+        "status": 500,
+        "msg": "Unexpected Internal Server Error"
+    },
+    "E01.01":{
+        "status": 400,
+        "msg": "Session ID not found in the request"
+    },
+    "E01.02":{
+        "status": 409,
+        "msg": "Username is in use"
+    },
+    "E01.03":{
+        "status": 400,
+        "msg": "Username is not specified"
+    },
+    "E01.04":{
+        "status": 400,
+        "msg": "Username format is not correct"
+    },
+    "E02.01":{
+        "status": 404,
+        "msg": "Game room doesn't exist"
+    },
+    "E02.02":{
+        "status": 409,
+        "msg": "Game room name is in use"
+    },
+    "E02.03":{
+        "status": 401,
+        "msg": "Game room is full"
+    },
+    "E02.04":{
+        "status": 400,
+        "msg": "Game room name format is not correct"
+    },
+    "E02.05":{
+        "status": 400,
+        "msg": "Game room name is not specified"
+    }
+}

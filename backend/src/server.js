@@ -4,12 +4,15 @@ var bodyParser  = require("body-parser");
 
 var iocontroller = require("./websockets");
 var router = require("./router");
-var sessionMiddelware = require("./auth/sessions").middeware;
+var sessionMiddleware = require("./auth/sessions").middeware;
+var errorMiddleware = require("./errors/Error");
+
+app.use(errorMiddleware);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(sessionMiddelware);
+app.use(sessionMiddleware);
 
 app.use(express.static('public'));
 app.use(router);
