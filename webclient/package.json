@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --output-path ../backend/public",
+    "build": "ng build --prod --output-path ../backend/public",
+    "autobuild-debug": "ng build --watch --output-path ../backend/public",
+    "chrome-debug": "google-chrome http://localhost:5200/ --remote-debugging-port=9222",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

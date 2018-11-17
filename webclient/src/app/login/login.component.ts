@@ -18,7 +18,9 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    this.rq.login(this.username).subscribe(() => this.router.navigate(['menu']));
+    if (this.username){
+      this.rq.login(this.username).subscribe(() => this.router.navigate(['menu']));
+    }
   }
 
 }

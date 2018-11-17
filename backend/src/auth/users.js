@@ -32,7 +32,7 @@ module.exports.newUser = function(username, sid){
         //Check if deadline has been reached
         if (online_users[existingUserIndex].last_update < (new Date().getTime() / 1000) - maxSecondsWithoutUpdates){
             //Delete existing user
-            this.delete_user(online_users[existingUserIndex].sid);
+            this.deleteUser(online_users[existingUserIndex].sid);
         }else{
             //Username is in use
             return false;
