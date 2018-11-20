@@ -23,6 +23,10 @@
         "status": 400,
         "msg": "Username format is not correct"
     },
+    "E01.05":{
+        "status": 401,
+        "msg": "User is not logged in"
+    },
     "E02.01":{
         "status": 404,
         "msg": "Game room doesn't exist"

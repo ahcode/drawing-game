@@ -9,6 +9,6 @@ export class RequestsService {
   constructor(private http: HttpClient) { }
 
   login(username){
-    return this.http.post('/login', { user: username });
+    return this.http.post('/api/login', { user: username });
   }
 }

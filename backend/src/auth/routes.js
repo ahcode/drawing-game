@@ -16,3 +16,12 @@ module.exports.logout = function(req, res){
     Users.deleteUser(req.sessionID);
     res.send();
 }
+
+module.exports.isauthenticated = function(req, res){
+    var name = Users.getUsername(req.sessionID);
+    if (name){
+        res.send();
+    }else{
+        res.throwError("E01.05");
+    }
+}
