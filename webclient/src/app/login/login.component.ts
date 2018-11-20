@@ -19,7 +19,10 @@ export class LoginComponent implements OnInit {
 
   login(){
     if (this.username){
-      this.auth.login(this.username).subscribe(() => this.router.navigate(['menu']));
+      this.auth.login(this.username).then((redirect) => {
+        if(redirect)
+          this.router.navigate(['menu']);
+      });
     }
   }
 
