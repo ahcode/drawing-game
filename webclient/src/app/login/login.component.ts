@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Response } from '@angular/http';
 import { Router } from '@angular/router';
-import { RequestsService } from '../requests.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,14 +12,14 @@ export class LoginComponent implements OnInit {
 
   username: String;
 
-  constructor( private rq: RequestsService, private router: Router ) { }
+  constructor( private auth: AuthService, private router: Router ) { }
 
   ngOnInit() {
   }
 
   login(){
     if (this.username){
-      this.rq.login(this.username).subscribe(() => this.router.navigate(['menu']));
+      this.auth.login(this.username).subscribe(() => this.router.navigate(['menu']));
     }
   }
 
